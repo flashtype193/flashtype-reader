@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+  **站点首页** ✓（GitHub Pages 打开的第一屏 ✓ —— 产物里它叫 `index.html` ✓，见 `site/build.sh` ✓）。
+
+  ⚠ 为什么**不**直接把这份内容塞进阅读器那个 `index.html` ✗：
+  ① 首页要的是**讲清楚**（是什么 ✓ / 有什么 ✓ / 点开看看 ✓），阅读器要的是**别挡着文档** ✓ ⇒
+     两件事 ⇒ 两页 ✓（各自只加载自己那份 JS ✓ ⇒ 首页**不拉 wasm** ✓ ⇒ 首屏不等 2.4 MB 的引擎 ✓）；
+  ② `index.html` 是**演示站点**的入口 ✓（`npm run dev` ⇒ 打开就是阅读器 ✓）⇒ 不能动 ✗。
+     ⇒ 源码这里叫 `landing.html` ✓，编完由 `build.sh` 换名 ✓（阅读器那份改叫 `reader.html` ✓）。
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flashtype Reader · 在浏览器里读 OFD / PDF</title>
+    <meta
+      name="description"
+      content="纯前端文档阅读器：OFD / PDF 在本机 wasm 里解析渲染，文件不上传、不装插件、不备字体包；支持 OFD ⇄ PDF 互转，可当组件或自定义元素嵌入。"
+    />
+    <meta property="og:title" content="Flashtype Reader · 在浏览器里读 OFD / PDF" />
+    <meta
+      property="og:description"
+      content="文档不出这台机器 —— 解析、渲染、互转全在浏览器里完成。"
+    />
+    <meta property="og:type" content="website" />
+    <script type="module" crossorigin src="./assets/landing-CBOffORD.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/web-_ckK8Vpc.js">
+    <link rel="stylesheet" crossorigin href="./assets/landing-CvyEZsTJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
